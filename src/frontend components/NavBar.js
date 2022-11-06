@@ -34,6 +34,9 @@ export class NavBar extends Component {
 
                         </ul>
                     </nav>
+                        
+                    </div>
+                    <div id="menu-btn" className="fas fa-bars">
                 </div>
             </div>
         );
