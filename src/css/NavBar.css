@@ -31,27 +31,29 @@
     /* position: fixed; */
     top: 0; left: 0; right: 0;
     z-index: 5000;
-    box-shadow:  1.5rem 1.5rem  rgba(2, 254, 149, 0.2);
+    /* box-shadow:  15rem 15rem  rgba(0, 0, 0, 1); */
+    box-shadow: 15px 5px 5x red;
     justify-content: space-between;
     align-items: center;
     background-color: fff;
-    border:  1.5px solid var(--green);
+    /* border:  1.5px solid var(--green); */
     padding-top: .5px;
 }
 
-.header .logo{
+.header .navbar .logo{
     font-size: 1.5rem;
     color: var(--black);
     text-decoration: none;
-    padding: 0%;
+    padding: 10px;
     margin: 0%;
 }
 .header .logo i{
-   
+   padding-right: 10px;
     color: var(--green);
 }
 
-.header .navbar  ul li a{
+
+.header .navbar  a{
     font-size: 1.2rem;
     color: var(--light-color);
     margin-left: 2 rem;
@@ -63,9 +65,10 @@
     display: flex;
     margin: 0;
     padding: 0px;
+    align-items: center;
 }
 
-.header .navbar ul li{
+.header .navbar a{
     list-style: none;
     /* gap: 1 rem; */
     display: flex;
@@ -85,6 +88,77 @@ ul {
   }
 
 #menu-btn{
-    
+    font-size: 2.5rem;
+    border-radius: .5rem;
+    background-color: #eee;
+    color: var(--green);
+    padding: 1 rem 1.5rem;
+    cursor: pointer;
+    display: none;
 }
  
+
+
+
+
+
+
+
+/* media queries  */
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding: 2rem;
+    }
+
+    section{
+        padding:2rem;
+    }
+
+}
+
+@media (max-width:768px){
+
+    #menu-btn{
+        display: initial;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top:115%; right: 2rem;
+        border-radius: .5rem;
+        box-shadow: var(--box-shadow);
+        width: 30rem;
+        border: var(--border);
+        background: #fff;
+        transform: scale(0);
+        opacity: 0;
+        transform-origin: top right;
+        transition: none;
+    }
+
+    .header .navbar.active{
+        transform: scale(1);
+        opacity: 1;
+        transition: .2s ease-out;
+    }
+
+    .header .navbar a{
+        font-size: 2rem;
+        display: block;
+        margin:2.5rem;
+    }
+
+}
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+}
