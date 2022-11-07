@@ -9,7 +9,7 @@
 h1 {
 	font-weight: bold;
 	margin: 30px;
-    color: #5b00ed;
+    color: #76b4fa;
 }
 
 
@@ -22,8 +22,8 @@ a {
 
 button {
 	border-radius: 20px;
-	border: 1px solid #3900f6;
-	background-color: #5b00ed;
+	border: 1px solid #76b4fa;
+	background-color: #76b4fa;
     margin: 50px;
 	color: #FFFFFF;
 	font-size: 12px;
@@ -43,7 +43,7 @@ form {
 	padding: 0 50px;
 	height: 50%;
 	text-align: center;
-    border: 2px solid #3900f6;
+    border: 2px solid #8088fb;
     border-radius: 20px;
     
 }

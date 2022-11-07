@@ -27,7 +27,7 @@ export class Signin extends Component {
                                 <option value="patient"></option>
                                 <option value="admin"></option>
                             </datalist>
-                            <a href="#">Forgot your password?</a>
+                            <a href="/addpatient">New User? Create a free account here</a>
                             <button>Sign In</button>
                         </form>
                     </div>

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import '../css/NavBar.css';
+import { Home } from "./Home";
 
 export class NavBar extends Component {
     constructor(props) {
@@ -15,13 +16,14 @@ export class NavBar extends Component {
 
                 <nav className="navbar">
                 <a href="/" className="logo"> <i className="fas fa-heartbeat"></i> Care 4 All</a>
-                    <a href="#" className= "active">Home</a>
-                    <a href="#">Doctor</a>
+                    <a href= "/" >Home</a>
+                    <a href="/listdoctor">Doctor</a>
                     <a href="#">Service</a>
                     <a href="#">About Us</a>
                     <a href="#">Contact Us</a>
+                    <a href="/signin">Sign in</a>
                 </nav>
-                <div id="menu-btn" class="fas fa-bars"></div>
+                
             </div>
          
         );

@@ -21,8 +21,8 @@ export class AddDoctorComponent extends Component {
 
     }
 
-    saveDoctor = (e) => {
-        e.preventDefault();
+    saveDoctor = (d) => {
+        d.preventDefault();
         let Doctor = {
             doctorName: this.state.doctorName,
             specialization: this.state.specialization,

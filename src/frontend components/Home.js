@@ -1,5 +1,8 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import { Component } from "react";
+import '../css/Home.css';
+import purplereception from '../images/purplereception.gif'
 
 export class Home extends Component{
     constructor(props){
@@ -10,9 +13,43 @@ export class Home extends Component{
     }
     render(){
         return(
-            <div>
+            <>
+            <section className="home" id = "home">
+                <div className="image">
+                    <img src={purplereception} alt="purplereception" />
+                </div>
+                <div className="content">
+                    <h3>Hello There!</h3>
+                    <h6>Always caring about your health!</h6>
+                    <h6>We are here to help you!!</h6>
+                    <a href="/addappointment" className="btn"> Book an Appointment with Us <i className="fa-solid fa-chevron-right"></i></a>
+                </div>
+            </section>
+
+            <section className="icons-container">
+                <div className="icons">
+                <i className="fa-solid fa-user-doctor"></i>
+                    <h3>100+</h3>
+                    <p>Doctors at work</p>
+                </div>
+                <div className="icons">
+                <i className="fa-solid fa-bed"></i>
+                    <h3>140+</h3>
+                    <p>Beds available</p>
+                </div>
+                <div className="icons">
+                <i className="fa-solid fa-users"></i>
+                    <h3>1400+</h3>
+                    <p>Satisfied Patients</p>
+                </div>
+                <div className="icons">
+                <i className="fa-solid fa-truck-medical"></i>
+                    <h3>40+</h3>
+                    <p>Ambulance on service</p>
+                </div>
                 
-            </div>
+            </section>
+            </>
         )
     }
 }

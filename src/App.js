@@ -26,7 +26,7 @@ function App() {
         <Route path="/listpatient" component={ListPatientComponent}></Route>
         <Route path="/addpatient" component={AddPatientComponent}></Route>
         <Route path="/updatepatientbyid/:id" component={UpdatePatientComponent}></Route>
-        <Route path="/getalldoctors" component={ListDoctorComponent}></Route>
+        <Route path="/listdoctor" component={ListDoctorComponent}></Route>
        <Route path="/adddoctor" component={AddDoctorComponent}></Route>
        <Route path="/listappointments" component={ListAppointmentComponent}></Route>
         <Route path="/addappointment" component={AddAppointmentComponent}></Route>
