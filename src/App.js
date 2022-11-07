@@ -30,7 +30,7 @@ function App() {
        <Route path="/adddoctor" component={AddDoctorComponent}></Route>
        <Route path="/listappointments" component={ListAppointmentComponent}></Route>
         <Route path="/addappointment" component={AddAppointmentComponent}></Route>
-        <Route path="/updateappointment/:appointment_id" component={UpdateAppointmentComponent}></Route> 
+        <Route path="/updateappointment/:id" component={UpdateAppointmentComponent}></Route> 
       </Switch>
       
       </div>

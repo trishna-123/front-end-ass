@@ -19,21 +19,24 @@ export class UpdateAppointmentComponent extends Component {
         this.changeDoctorIdHandler = this.changeDoctorIdHandler.bind(this);
         this.changeFeeHandler = this.changeFeeHandler.bind(this);
 
-        this.updateAppointment = this.updateAppointment.bind(this)
+        this.updateAppointment = this.updateAppointment.bind(this);
     }
 
     componentDidMount(){
-        AppointmentService.getAppointmentById(this.state.appointmentId).then((res) =>{
+        console.log(this.props.match.params.id);
+        AppointmentService.getAppointment(this.state.appointmentId).then((res) => {
+            console.log(res.data);
+
             let appointment = res.data;
             this.setState({
                 appointmentDate: appointment.appointmentDate,
                 appointmentStatus: appointment.appointmentStatus,
                 userId: appointment.userId,
                 doctorId: appointment.doctorId,
-                fee: appointment.fee
+                fee: appointment.fee,
             });
-        });
-    }
+        }) 
+        }
 
     updateAppointment = (a) => {
         a.preventDefault();
@@ -87,27 +90,27 @@ export class UpdateAppointmentComponent extends Component {
                             <form>
                                 <div className="form-group">
                                   <label >Appointment Date</label>
-                                  <input type="datetime-local" name="appointmentDate" className="form-control" placeholder="Enter AppointmentDate" 
+                                  <input type="datetime-local" name="appointmentDate" className="form-control" placeholder="Enter appointmentDate" 
                                    value={this.state.appointmentDate} onChange={this.changeAppointmentDateHandler} />
                                 </div>
                                 <div className="form-group">
                                   <label >Appointment Status</label>
-                                  <input type="text" name="appointmentStatus" className="form-control" placeholder="Enter AppointmentStatus" 
+                                  <input type="text" name="appointmentStatus" className="form-control" placeholder="Enter appointmentStatus" 
                                    value={this.state.appointmentStatus} onChange={this.changeAppointmentStatusHandler} />
                                 </div>
                                 <div className="form-group">
                                   <label >User Id</label>
-                                  <input type="text" name="userId" className="form-control" placeholder="Enter UserId" 
+                                  <input type="number" name="userId" className="form-control" placeholder="Enter userId" 
                                    value={this.state.userId} onChange={this.changeUserIdHandler} />
                                 </div>
                                 <div className="form-group">
                                   <label >Doctor Id</label>
-                                  <input type="text" name="doctorId" className="form-control" placeholder="Enter DoctorId" 
+                                  <input type="number" name="doctorId" className="form-control" placeholder="Enter doctorId" 
                                    value={this.state.doctorId} onChange={this.changeDoctorIdHandler} />
                                 </div>
                                 <div className="form-group">
-                                  <label >Fee</label>
-                                  <input type="text" name="fee" className="form-control" placeholder="Enter Fee" 
+                                  <label >fee</label>
+                                  <input type="number" name="fee" className="form-control" placeholder="Enter fee" 
                                    value={this.state.fee} onChange={this.changeFeeHandler} />
                                 </div>
                                 <button type="button" className="btn btn-success" onClick={this.updateAppointment}>Update</button>

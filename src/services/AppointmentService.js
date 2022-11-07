@@ -18,7 +18,7 @@ class AppointmentService{
         return axios.put("http://localhost:8686/appointment/appointment/updateappointmentbyid/"+id,appointment);
     } 
 
-    getAppointmentById(id){
+    getAppointment(id){
         return axios.get("http://localhost:8686/appointment/appointment/getappointmentbyid/"+id);
     }
 

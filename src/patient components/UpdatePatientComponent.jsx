@@ -33,6 +33,7 @@ export class UpdatePatientComponent extends Component{
 
     componentDidMount(){
         PatientService.getPatient(this.state.userId).then((res) =>{
+            console.log(res.data)
             let patient = res.data;
             this.setState({
                 userName: patient.userName,
