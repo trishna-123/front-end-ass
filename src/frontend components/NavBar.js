@@ -34,7 +34,7 @@ export class NavBar extends Component {
                     </li>
 
                 </nav>
-                {/* <a href="/signin">Sign in</a> */}
+                
             </div>
 
         );
