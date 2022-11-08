@@ -3,6 +3,7 @@ import React from "react";
 import { Component } from "react";
 import '../css/Home.css';
 import purplereception from '../images/purplereception.gif'
+import { MainHeader } from "../MainHeader";
 
 export class Home extends Component{
     constructor(props){
@@ -14,6 +15,7 @@ export class Home extends Component{
     render(){
         return(
             <>
+                <MainHeader />
             <section className="home" id = "home">
                 <div className="image">
                     <img src={purplereception} alt="purplereception" />

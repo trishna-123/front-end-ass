@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import AppointmentService from "../services/AppointmentService";
-
+import { NavAfterLoginUser } from "../NavAfterLoginUser";
 
 export class AddAppointmentComponent extends Component{
     constructor(props) {
@@ -67,6 +67,7 @@ export class AddAppointmentComponent extends Component{
     render() {
         return (
             <div>
+                <NavAfterLoginUser />
                 <br ></br>
                 <div className="container">
                     <div>

@@ -19,7 +19,7 @@ function App() {
   return (
     <div>
     <BrowserRouter>
-    < Header />
+    {/* < Header /> */}
      <div className="container-fluid">
       <Switch>
         <Route path="/" exact component={Home}></Route>
