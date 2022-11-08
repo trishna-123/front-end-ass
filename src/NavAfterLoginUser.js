@@ -22,17 +22,7 @@ export class NavAfterLoginUser extends Component {
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Contact Us</a></li>
                     <li><a href="/">Log Out</a></li>
-                    {/* <li>
-                        <div>
-                            <button type="button" className="dropdown-toggle" data-toggle="dropdown" >
-                                Sign in
-                            </button>
-                            <div className="dropdown-menu">
-                                <a className="dropdown-item" href="/signin">Patient</a>
-                                <a className="dropdown-item" href="/signinasadmin">Admin</a>
-                            </div>
-                        </div>
-                    </li> */}
+                    
 
                 </nav>
                 
