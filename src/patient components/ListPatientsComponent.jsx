@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PatientService from "../services/PatientService";
 import { Link } from "react-router-dom";
-
+import '../css/Listpatient.css';
 export class ListPatientComponent extends Component {
     constructor(props) {
         super(props);
@@ -29,11 +29,11 @@ export class ListPatientComponent extends Component {
     render() {
         return (
             <div>
-                <h2 className="text-center">Patient List</h2>
+                <h2>Patient List</h2>
                 <div className="row">
                     <table className="table table-striped table-inverse">
                         <thead className="thead-inverse">
-                            <tr>
+                            <tr className="header">
                                 {/* <th>User Id</th> */}
                                 <th>User Name</th>
                                 <th>Patient Name</th>
@@ -51,22 +51,25 @@ export class ListPatientComponent extends Component {
                             this.state.patients.map(
                                 patient =>
                                     <tr key={patient.userId}>
-                                        <td>{patient.userName}</td>
-                                        <td>{patient.patientName}</td>
-                                        <td>{patient.address}</td>
-                                        <td>{patient.password}</td>
-                                        <td>{patient.userEmail}</td>
-                                        <td>{patient.phoneNo}</td>
-                                        <td>{patient.dob}</td>
-                                        <td>{patient.gender}</td>
-                                        <td>
-                                            <button type="button" className="btn btn-warning" style={{ marginRight: "10px" }}> 
+                                        <td className="text-center align-middle">{patient.userName}</td>
+                                        <td className="text-center align-middle">{patient.patientName}</td>
+                                        <td className="text-center align-middle">{patient.address}</td>
+                                        <td className="text-center align-middle">{patient.password}</td>
+                                        <td className="text-center align-middle">{patient.userEmail}</td>
+                                        <td className="text-center align-middle">{patient.phoneNo}</td>
+                                        <td className="text-center align-middle">{patient.dob}</td>
+                                        <td className="text-center align-middle">{patient.gender}</td>
+                                        <div>
+                                            
+                                        <td className="button">
+                                            <button type="button" className="warning" style={{ marginRight: "10px" }}> 
                                                 <Link to={"/updatepatientbyid/" + patient.userId} >
                                                     Update
                                                 </Link>
                                             </button>                                 
-                                            <button className="btn btn-danger" onClick={() => this.deletePatient(patient.userId)}>Delete</button>
+                                            <button className="danger" onClick={() => this.deletePatient(patient.userId)}>Delete</button>
                                         </td>
+                                        </div>
                                     </tr>
                                 )
                             }

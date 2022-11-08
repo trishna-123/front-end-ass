@@ -53,6 +53,28 @@
     font-size: 30px;
 }
 
+li{
+    text-decoration: none;
+    list-style: none;
+}
+
+.dropdown-toggle{
+    font-size: 1.2rem;
+    color: var(--light-color);
+    margin-left: 2 rem;
+    text-decoration: none;
+    justify-content: center;
+    text-align: center;
+    list-style: none;
+    /* gap: 1rem; */
+    display: flex;
+    margin: 0;
+    padding: 0px;
+    align-items: center;
+    background-color: white;
+    border-color: white;
+    font-weight: none;
+}
 
 .header .navbar  a{
     font-size: 1.2rem;
@@ -67,6 +89,7 @@
     margin: 0;
     padding: 0px;
     align-items: center;
+    font-weight: none;
 }
 
 .header .navbar a{
@@ -102,7 +125,6 @@ ul {
     display: none;
 }
  
-
 
 
 

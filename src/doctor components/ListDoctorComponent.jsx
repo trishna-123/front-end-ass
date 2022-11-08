@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import DoctorService from "../services/DoctorService";
 /* import {DoctorService} from "../services/DoctorService"; */
-
+import '../css/ListDoctor.css';
 
 
 
@@ -40,7 +40,7 @@ export class ListDoctorComponent extends Component {
                 <div className="row">
                     <table className="table table-striped table-inverse">
                         <thead className="thead-inverse">
-                            <tr>
+                            <tr className="header">
                                 <th>Doctor Name</th>
                                 <th>specialization</th>
                                 <th>consultant</th>
@@ -54,18 +54,18 @@ export class ListDoctorComponent extends Component {
                                 this.state.doctors.map(
                                     doctor =>
                                         <tr key={doctor.doctorId}>
-                                            <td>{doctor.doctorName}</td>
-                                            <td>{doctor.specialization}</td>
-                                            <td>{doctor.consultant}</td>
-                                            <td>{doctor.fee}</td>
-                                            <td>
+                                            <td className="text-center align-middle">{doctor.doctorName}</td>
+                                            <td className="text-center align-middle">{doctor.specialization}</td>
+                                            <td className="text-center align-middle">{doctor.consultant}</td>
+                                            <td className="text-center align-middle">{doctor.fee}</td>
+                                            <td className="text-center align-middle">
                                                 {/* <button type="button" className="btn btn-success" style ={{marginRight :"10px"}}>
                                         <Link to ={"/updatedoctorbyid/" + doctor.doctorId} className ="styleLink">
                                              update
                                             </Link>
 
                                     </button> */}
-                                                <button className="btn btn-danger" onClick={() => this.deleteDoctor(doctor.doctorId)}>Delete</button>
+                                                <button className="danger" onClick={() => this.deleteDoctor(doctor.doctorId)}>Delete</button>
                                             </td>
                                         </tr>
                                         )  }

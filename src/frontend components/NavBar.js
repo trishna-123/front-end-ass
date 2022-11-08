@@ -15,20 +15,31 @@ export class NavBar extends Component {
             <div className="header">
 
                 <nav className="navbar">
-                <a href="/" className="logo"> <i className="fas fa-heartbeat"></i> Care 4 All</a>
-                    <a href= "/" >Home</a>
-                    <a href="/listdoctor">Doctor</a>
-                    <a href="#">Service</a>
-                    <a href="#">About Us</a>
-                    <a href="#">Contact Us</a>
-                    <a href="/signin">Sign in</a>
+                    <a href="/" className="logo"> <i className="fas fa-heartbeat"></i> Care 4 All</a>
+                    <a href="/" >Home</a>
+                    <li><a href="/listdoctor">Doctor</a></li>
+                    <li><a href="#">Service</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li>
+                        <div>
+                            <button type="button" className="dropdown-toggle" data-toggle="dropdown" >
+                                Sign in
+                            </button>
+                            <div className="dropdown-menu">
+                                <a className="dropdown-item" href="/signin">Patient</a>
+                                <a className="dropdown-item" href="/signinasadmin">Admin</a>
+                            </div>
+                        </div>
+                    </li>
+
                 </nav>
-                
+                {/* <a href="/signin">Sign in</a> */}
             </div>
-         
+
         );
     }
 
 
-    
+
 }

@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import PatientService from "../services/PatientService";
 import '../css/Addpatient.css'
-export class AddPatientComponent extends Component{
+import purplereception from '../images/doctorchecking.gif'
+export class AddPatientComponent extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -13,13 +14,13 @@ export class AddPatientComponent extends Component{
             phoneNo: '',
             dob: '',
             gender: '',
-           
+
         }
 
         this.changeUserNameHandler = this.changeUserNameHandler.bind(this);
         this.changePatientNameHandler = this.changePatientNameHandler.bind(this);
         this.changePatientAddressHandler = this.changePatientAddressHandler.bind(this);
-        this.changePatientPasswordHandler  = this.changePatientPasswordHandler.bind(this);
+        this.changePatientPasswordHandler = this.changePatientPasswordHandler.bind(this);
         this.changePatientEmailHandler = this.changePatientEmailHandler.bind(this);
         this.changePatientPhoneNoHandler = this.changePatientPhoneNoHandler.bind(this);
         this.changePatientDOBHandler = this.changePatientDOBHandler.bind(this);
@@ -46,7 +47,7 @@ export class AddPatientComponent extends Component{
         })
 
         this.props.history.push("/listpatient");
-       
+
     }
     cancel() {
         alert("Cancelling without adding ..")
@@ -79,62 +80,75 @@ export class AddPatientComponent extends Component{
     render() {
         return (
             <div>
+                <div className="image">
+                    <img src={purplereception} alt="purplereception" />
+                </div>
                 <br />
-                <div className="container">
-                    <div>
-                        <div className="card col-md-6 offset-md-3">
-                            <h2>Sign Up/ Add patient</h2>
+                <div className="border">
+                <h2>Sign Up</h2>
+                    <form className="formcontainer">
+                        <div className="formgroup">
+                            <label ></label>
+                            <input type="text" name="userName" className="formcontrol first"
+                                placeholder="Enter Username" value={this.state.userName} onChange={this.changeUserNameHandler} />
                         </div>
-                        <div className="card-body">
-                            <form>
-                                <div className="form-group">
-                                    <label ></label>
-                                    <input type="text" name="userName" className="form-control"
-                                        placeholder="Enter Username" value={this.state.userName} onChange={this.changeUserNameHandler} />
-                                </div>
-                                <div className="form-group">
-                                    <label></label>
-                                    <input type="text" name="patientName"  className="form-control"
-                                        placeholder="Enter patient name" value={this.state.patientName} onChange={this.changePatientNameHandler} />
-                                </div>
-                                <div className="form-group">
-                                    <label></label>
-                                    <input type="text" name="address"  className="form-control"
-                                        placeholder="Enter Patient Address" value={this.state.address} onChange={this.changePatientAddressHandler} />
-                                </div>
-                                <div className="form-group">
-                                    <label></label>
-                                    <input type="password" name="password" className="form-control"
-                                        placeholder="Enter password" value={this.state.password} onChange={this.changePatientPasswordHandler} />
-                                </div>
-                                <div className="form-group">
-                                    <label></label>
-                                    <input type="text" name="userEmail" className="form-control"
-                                        placeholder="Enter Patient email id" value={this.state.userEmail} onChange={this.changePatientEmailHandler} />
-                                </div>
-                                <div className="form-group">
-                                    <label></label>
-                                    <input type="text" name="phoneNo" className="form-control"
-                                        placeholder="Enter Patient Phone Number" value={this.state.phoneNo} onChange={this.changePatientPhoneNoHandler} />
-                                </div>
-                                <div className="form-group">
-                                    <label></label>
-                                    <input type="date" name="dob" className="form-control"
-                                        placeholder="Enter Date of Birth" value={this.state.dob} onChange={this.changePatientDOBHandler} />
-                                </div>
-                                <div className="form-group">
-                                    <label></label>
-                                    <input type="text" name="gender" className="form-control"
-                                        placeholder="Enter gender" value={this.state.gender} onChange={this.changePatientGenderHandler} />
-                                </div>
-                                <button type="button" className="btn btn-success" onClick={this.savePatient}>Create</button>
-                                <button type="button" className="btn btn-danger" onClick={this.cancel.bind(this)} style={{ marginLeft: "10px" }}>Cancel</button>
+                        <div className="formgroup">
+                            <label></label>
+                            <input type="text" name="patientName" className="formcontrol"
+                                placeholder="Enter patient name" value={this.state.patientName} onChange={this.changePatientNameHandler} />
+                        </div>
+                        <div className="formgroup">
+                            <label></label>
+                            <input type="text" name="address" className="formcontrol"
+                                placeholder="Enter your Address" value={this.state.address} onChange={this.changePatientAddressHandler} />
+                        </div>
+                        <div className="formgroup">
+                            <label></label>
+                            <input type="password" name="password" className="formcontrol"
+                                placeholder="Enter password" value={this.state.password} onChange={this.changePatientPasswordHandler} />
+                        </div>
+                        <div className="formgroup">
+                            <label></label>
+                            <input type="text" name="userEmail" className="formcontrol"
+                                placeholder="Enter your email id" value={this.state.userEmail} onChange={this.changePatientEmailHandler} />
+                        </div>
+                        <div className="formgroup">
+                            <label></label>
+                            <input type="text" name="phoneNo" className="formcontrol"
+                                placeholder="Enter your Phone Number" value={this.state.phoneNo} onChange={this.changePatientPhoneNoHandler} />
+                        </div>
+                        <div className="formgroup">
+                            <label></label>
+                            <input type="date" name="dob" className="formcontrol"
+                                placeholder="Enter Date of Birth" value={this.state.dob} onChange={this.changePatientDOBHandler} />
+                        </div>
+                        <div className="formgroup">
+                            <label></label>
+                            <input name="gender" className="formcontrol" list="gender" value={this.state.gender}
+                                placeholder="Select gender" onChange={this.changePatientGenderHandler} />
+                            <datalist id="gender">
+                                <option value="male"></option>
+                                <option value="female"></option>
+                                <option value="others"></option>
+                            </datalist>
 
-                            </form>
+                            {/* <input  name="role"  list = "role" placeholder="Role" />
+                                                                    <datalist id="role">
+                                                                        <option value="patient"></option>
+                                                                        <option value="admin"></option>
+                                                                    </datalist> */}
                         </div>
-                    </div>
+                            
+                        <div className="buttons">
+                        <button type="button" className="success" onClick={this.savePatient}>Create</button>
+                        <button type="button" className="danger" onClick={this.cancel.bind(this)}>Cancel</button>
+                        </div>
+
+                    </form>
                 </div>
             </div>
+
+
         )
     }
 }

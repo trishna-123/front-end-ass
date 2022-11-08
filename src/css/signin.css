@@ -40,7 +40,7 @@ form {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	padding: 0 50px;
+	padding: 0 30px;
 	height: 50%;
 	text-align: center;
     border: 2px solid #8088fb;
@@ -66,7 +66,7 @@ input {
 }
 
 .sign-in-container {
-    top: 150px;
+    top: 15px;
 	left: 300px;
     right: 0;
     height: 50%;
