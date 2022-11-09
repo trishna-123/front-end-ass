@@ -24,7 +24,7 @@ export class Home extends Component{
                     <h3>Hello There!</h3>
                     <h6>Always caring about your health!</h6>
                     <h6>We are here to help you!!</h6>
-                    <a href="/addappointment" className="btn"> Book an Appointment with Us <i className="fa-solid fa-chevron-right"></i></a>
+                    <a href="/signin" className="btn"> Book an Appointment with Us <i className="fa-solid fa-chevron-right"></i></a>
                 </div>
             </section>
 

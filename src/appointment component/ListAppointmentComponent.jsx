@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import AppointmentService from "../services/AppointmentService";
-
+import { NavBarAdmin } from "../NavBarAdmin";
+import '../css/ListAppointment.css';
 import { Link } from "react-router-dom";
 
  
@@ -38,7 +39,8 @@ export class ListAppointmentComponent extends Component{
     render(){
         return(
             <>
-                <h2 className =  "text-center">Appointments List</h2>
+            <NavBarAdmin />
+                <h2 className = "text-center">Appointments List</h2>
                 <div className="row">
                     <table className="table table-striped table-inverse">
                         <thead className="thead-inverse">
@@ -56,18 +58,18 @@ export class ListAppointmentComponent extends Component{
                                 this.state.appointments.map(
                                     appointment =>
                                     <tr key={appointment.appointmentId}>
-                                        <td>{appointment.appointmentDate}</td>
-                                        <td>{appointment.appointmentStatus}</td>
-                                        <td>{appointment.userId}</td>
-                                        <td>{appointment.doctorId}</td>
-                                        <td>{appointment.fee}</td>
-                                        <td>
-                                        <button type="button" className="btn btn-success" style={{marginRight:"10px"}}>
-                                           <Link to={"/updateappointment/" + appointment.appointmentId} className="stylelink">
+                                        <td className="text-center align-middle">{appointment.appointmentDate}</td>
+                                        <td className="text-center align-middle">{appointment.appointmentStatus}</td>
+                                        <td className="text-center align-middle">{appointment.userId}</td>
+                                        <td className="text-center align-middle">{appointment.doctorId}</td>
+                                        <td className="text-center align-middle">{appointment.fee}</td>
+                                        <td className="text-center align-middle">
+                                        <button type="button" className="success">
+                                           <Link className="update" to={"/updateappointment/" + appointment.appointmentId}>
                                                 update
                                             </Link>
                                         </button>
-                                        <button className="btn btn-danger" onClick={()=>this.deleteAppointmentById(appointment.appointmentId)}>Delete</button>
+                                        <button className="danger" onClick={()=>this.deleteAppointmentById(appointment.appointmentId)}>Delete</button>
                                         </td>
                                     </tr>
                                 )

@@ -14,6 +14,11 @@ import { UpdateAppointmentComponent } from './appointment component/UpdateAppoin
 import { ListAppointmentComponent } from './appointment component/ListAppointmentComponent';
 import {SigninValidation} from './SigninValidation';
 import { SigninAdmin } from './SigninAdmin';
+import { HomeBasedOnLogin } from './frontend components/HomeAfterLogin';
+import { AdminHomePage } from './AdminHomePage';
+import { AboutUs } from './frontend components/AboutUs';
+import { ContactUs } from './frontend components/ContactUs';
+
 
 function App() {
   return (
@@ -22,17 +27,21 @@ function App() {
     {/* < Header /> */}
      <div className="container-fluid">
       <Switch>
-        <Route path="/" exact component={Home}></Route>
+        <Route path="/" exact component={HomeBasedOnLogin}></Route>
         <Route path="/signin" exact component={SigninValidation}></Route>
         <Route path="/signinasadmin" exact component={SigninAdmin}></Route>
+        <Route path="/adminhome" exact component={AdminHomePage}></Route>
         <Route path="/listpatient" component={ListPatientComponent}></Route>
         <Route path="/addpatient" component={AddPatientComponent}></Route>
         <Route path="/updatepatientbyid/:id" component={UpdatePatientComponent}></Route>
         <Route path="/listdoctor" component={ListDoctorComponent}></Route>
        <Route path="/adddoctor" component={AddDoctorComponent}></Route>
+       <Route path="/aboutus" component={AboutUs}></Route>
+       <Route path="/contactus" component={ContactUs}></Route>
        <Route path="/listappointments" component={ListAppointmentComponent}></Route>
         <Route path="/addappointment" component={AddAppointmentComponent}></Route>
-        <Route path="/updateappointment/:id" component={UpdateAppointmentComponent}></Route> 
+        <Route path="/updateappointment/:id" component={UpdateAppointmentComponent}></Route>
+
       </Switch>
       
       </div>

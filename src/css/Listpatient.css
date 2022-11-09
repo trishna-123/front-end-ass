@@ -50,8 +50,8 @@ td{
     color: white;
     background-color: rgb(247, 123, 57);
     font-size: 15px;
-    margin:  0 5px;
-    padding: 5% 2%;
+    margin: 0 5px;
+    padding: 10px 10px;
     text-decoration: none; 
 }
 
@@ -61,7 +61,7 @@ td{
     background-color: rgb(247, 57, 57);
     font-size: 15px;
     margin: 0 5px;
-    padding: 5% 23% 5% 20%;
+    padding: 10px 10px;
 }
 
 .button a{

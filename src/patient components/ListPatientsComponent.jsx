@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import PatientService from "../services/PatientService";
 import { Link } from "react-router-dom";
 import '../css/Listpatient.css';
+import { NavBarAdmin } from "../NavBarAdmin";
+
 export class ListPatientComponent extends Component {
     constructor(props) {
         super(props);
@@ -29,6 +31,7 @@ export class ListPatientComponent extends Component {
     render() {
         return (
             <div>
+                <NavBarAdmin/>
                 <h2>Patient List</h2>
                 <div className="row">
                     <table className="table table-striped table-inverse">

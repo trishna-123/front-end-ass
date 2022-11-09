@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import '../src/css/NavBar.css';
 import { Home } from "./frontend components/Home";
 
@@ -9,19 +10,29 @@ export class NavAfterLoginUser extends Component {
 
         }
     }
+    loggedOut(){
+        // l.preventDefault();
+        alert("Logged out");
+    }
 
     render() {
         return (
             <div className="header">
 
                 <nav className="navbar">
-                    <a href="/" className="logo"> <i className="fas fa-heartbeat"></i> Care 4 All</a>
-                    <a href="/" >Home</a>
+                    <a  className="logo"> <i className="fas fa-heartbeat"></i> Care 4 All</a>
+                    {/* <a href="/" ></a> */}
                     <li><a href="/listdoctor">Doctor</a></li>
                     <li><a href="#">Service</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="/">Log Out</a></li>
+                    <li><a href="/aboutus">About Us</a></li>
+                    <li><a href="/contactus">Contact Us</a></li>
+                    <div>
+                    <Link to ={"/"} className ="styleLink" onClick={this.loggedOut}>
+                                             log out
+                                            </Link>
+                        {/* <button type="button" onClick ={this.loggedOut}>log out</button> */}
+                    {/* <li><a href="/">Logout </a></li> */}                        
+                    </div>
                     
 
                 </nav>

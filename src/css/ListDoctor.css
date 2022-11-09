@@ -77,3 +77,26 @@ td{
 .danger:hover{
     background-color: rgb(245, 32, 32);
 }
+
+.adddoctor{
+    background-color:var(--lpurple);
+    margin-left: -60%;
+    margin-top: -5%;
+}
+.adddoctor a{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;    
+}
+
+.button-area{
+    align-items: none;
+   margin-left: 10%;
+
+
+}
+.adddoctor:hover{
+    background-color: #4a55f2;
+    
+}

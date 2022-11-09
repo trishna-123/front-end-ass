@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import DoctorService from "../services/DoctorService";
 /* import {DoctorService} from "../services/DoctorService"; */
 import '../css/ListDoctor.css';
+import { NavBarAdmin } from "../NavBarAdmin";
 
 
 
@@ -36,7 +37,15 @@ export class ListDoctorComponent extends Component {
     render() {
         return (
             <div>
+                <NavBarAdmin />
                 <h2 className="text-center"> Doctor  List </h2>
+                {/* <div className="button-area"> */}
+                    <button className="adddoctor" type="button">
+                        <Link to={"/adddoctor"} >
+                            Add doctor
+                        </Link>
+                    </button>
+                {/* </div> */}
                 <div className="row">
                     <table className="table table-striped table-inverse">
                         <thead className="thead-inverse">
@@ -68,7 +77,7 @@ export class ListDoctorComponent extends Component {
                                                 <button className="danger" onClick={() => this.deleteDoctor(doctor.doctorId)}>Delete</button>
                                             </td>
                                         </tr>
-                                        )  }
+                                )}
                         </tbody>
                     </table>
                 </div>

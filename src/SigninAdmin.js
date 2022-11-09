@@ -35,7 +35,7 @@ export class SigninAdmin extends Component {
             if ((this.state.adminName === "admin") && (this.state.Password === "admin@123")) {
                 alert("Welcome " + this.state.adm[i].adminName);
                 find = 1;
-                this.props.history.push("/addappointment");
+                this.props.history.push("/adminhome");
             }
         }
 

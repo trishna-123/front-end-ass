@@ -19,8 +19,8 @@ export class NavBar extends Component {
                     <a href="/" >Home</a>
                     <li><a href="/listdoctor">Doctor</a></li>
                     <li><a href="#">Service</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="/aboutus">About Us</a></li>
+                    <li><a href="/contactus">Contact Us</a></li>
                     <li>
                         <div>
                             <button type="button" className="dropdown-toggle" data-toggle="dropdown" >

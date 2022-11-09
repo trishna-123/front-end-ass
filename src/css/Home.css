@@ -15,7 +15,7 @@ section{
     padding-top: 0%;
 }
 
-section:nth-child(even){
+section:nth-child(odd){
     background: #f5f5f5;
 }
 .home{
@@ -48,6 +48,7 @@ section:nth-child(even){
     color: #3f4bd6;
     line-height: 1.8;
     padding-left: 30px;
+    font-style: normal;
     /* text-shadow: var(--text-shawdow); */
 }
 
@@ -56,6 +57,8 @@ section:nth-child(even){
     color: #76b4fa;
     line-height: 1.8;
     padding-left: 30px;
+    font-style: normal;
+    font-weight: none;
 }
 
 .btn{
