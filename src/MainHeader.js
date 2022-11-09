@@ -16,7 +16,7 @@ export function MainHeader(props) {
                 <li><a href="/" className="logo"> <i className="fas fa-heartbeat"></i> Care 4 All</a></li>
                 <li><a href="/" >Home</a></li>
                 <li><a href="/listdoctor">Doctor</a></li>
-                <li><a href="#">Service</a></li>
+                <li><a href="/services">Service</a></li>
                 <li><a href="/aboutus">About Us</a></li>
                 <li><a href="/contactus">Contact Us</a></li>
                 <li>
@@ -44,7 +44,7 @@ export function MainHeader(props) {
                 <a className="logo"> <i className="fas fa-heartbeat"></i> Care 4 All</a>
                 
                 <li><a href="/listdoctor">Doctor</a></li>
-                <li><a href="#">Service</a></li>
+                <li><a href="/services">Service</a></li>
                 <li><a href="/aboutus">About Us</a></li>
                 <li><a href="/contactus">Contact Us</a></li>
                 <li><a href="/">Log out</a></li>

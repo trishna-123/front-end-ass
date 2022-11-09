@@ -18,6 +18,7 @@ import { HomeBasedOnLogin } from './frontend components/HomeAfterLogin';
 import { AdminHomePage } from './AdminHomePage';
 import { AboutUs } from './frontend components/AboutUs';
 import { ContactUs } from './frontend components/ContactUs';
+import TopServices from './frontend components/Service';
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
         <Route path="/listdoctor" component={ListDoctorComponent}></Route>
        <Route path="/adddoctor" component={AddDoctorComponent}></Route>
        <Route path="/aboutus" component={AboutUs}></Route>
+       <Route path="/services" component={TopServices}></Route>
        <Route path="/contactus" component={ContactUs}></Route>
        <Route path="/listappointments" component={ListAppointmentComponent}></Route>
         <Route path="/addappointment" component={AddAppointmentComponent}></Route>

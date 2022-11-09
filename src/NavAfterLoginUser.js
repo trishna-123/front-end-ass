@@ -23,7 +23,7 @@ export class NavAfterLoginUser extends Component {
                     <a  className="logo"> <i className="fas fa-heartbeat"></i> Care 4 All</a>
                     {/* <a href="/" ></a> */}
                     <li><a href="/listdoctor">Doctor</a></li>
-                    <li><a href="#">Service</a></li>
+                    <li><a href="/services">Service</a></li>
                     <li><a href="/aboutus">About Us</a></li>
                     <li><a href="/contactus">Contact Us</a></li>
                     <div>
