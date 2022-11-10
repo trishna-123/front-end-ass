@@ -2,6 +2,7 @@ import React from "react";
 import { Link, useHistory } from "react-router-dom";
 import { MainHeader } from "../MainHeader";
 import purplereception from '../images/purplereception.gif'
+import { NavAfterLoginUser } from "../NavAfterLoginUser";
 
 
 export function HomeBasedOnLogin(props){
@@ -10,7 +11,8 @@ export function HomeBasedOnLogin(props){
 
     const loggedIn=(
         <>
-        <MainHeader />
+        <NavAfterLoginUser />
+        
             <section className="home" id = "home">
                 <div className="image">
                     <img src={purplereception} alt="purplereception" />
@@ -57,7 +59,7 @@ export function HomeBasedOnLogin(props){
                     <img src={purplereception} alt="purplereception" />
                 </div>
                 <div className="content">
-                    <h3>Hello There</h3>
+                    <h3>Hello There!</h3>
                     <h6>Always caring about your health!</h6>
                     <h6>We are here to help you!!</h6>
                     <a href="/signin" className="btn"> Book an Appointment with Us <i className="fa-solid fa-chevron-right"></i></a>

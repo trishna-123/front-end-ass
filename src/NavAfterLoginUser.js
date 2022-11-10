@@ -22,10 +22,14 @@ export class NavAfterLoginUser extends Component {
                 <nav className="navbar">
                     <a  className="logo"> <i className="fas fa-heartbeat"></i> Care 4 All</a>
                     {/* <a href="/" ></a> */}
-                    <li><a href="/listdoctor">Doctor</a></li>
-                    <li><a href="/services">Service</a></li>
-                    <li><a href="/aboutus">About Us</a></li>
-                    <li><a href="/contactus">Contact Us</a></li>
+                    {/* <li ><a href="/home">Home</a></li> */}
+                    
+                    <li><a href="/searchbyspec">Doctor</a></li>
+                    <li><a href="/profile">Profile</a></li>
+                    {/* <li><a href="/services">Service</a></li> */}
+                    {/* <li><a href="/aboutus">About Us</a></li> */}
+                    {/* <li><a href="/contactus">Contact Us</a></li> */}
+
                     <div>
                     <Link to ={"/"} className ="styleLink" onClick={this.loggedOut}>
                                              log out

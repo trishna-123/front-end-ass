@@ -97,6 +97,18 @@ td{
 
 }
 .adddoctor:hover{
-    background-color: #4a55f2;
+    background-color: #ffffff;
     
+}
+
+.buttondiv{
+    max-width: 40%;
+}
+.buttonadd{
+    margin: 0%;
+    height: 50px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    
+
 }

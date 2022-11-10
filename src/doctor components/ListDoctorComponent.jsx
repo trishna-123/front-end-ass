@@ -30,6 +30,9 @@ export class ListDoctorComponent extends Component {
         })
 
     }
+    adddoctor() {
+        this.props.history.push("/adddoctors");
+    }
 
     updateDoctor(id) {
     }
@@ -40,11 +43,18 @@ export class ListDoctorComponent extends Component {
                 <NavBarAdmin />
                 <h2 className="text-center"> Doctor  List </h2>
                 {/* <div className="button-area"> */}
-                    <button className="adddoctor" type="button">
-                        <Link to={"/adddoctor"} >
+                {/* <button className="adddoctor" type="button">
+                        <Link to={"/adddoctor"} onClick={this.adddoctor}>
                             Add doctor
                         </Link>
-                    </button>
+                    </button> */}
+                <div className="buttondiv">
+                <button className="buttonadd" type="button" >
+                    <Link to={"/adddoctor"} className="add">
+                        Add doctor
+                    </Link>
+                </button>
+                </div>
                 {/* </div> */}
                 <div className="row">
                     <table className="table table-striped table-inverse">

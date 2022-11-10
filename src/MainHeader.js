@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useHistory } from "react-router-dom";
 import { NavBar } from "./frontend components/NavBar";
-import { NavAfterLoginUser } from "./NavAfterLoginUser";
+// import { NavAfterLoginUser } from "./NavAfterLoginUser";
 import '../src/css/NavBar.css';
 
 
@@ -15,10 +15,9 @@ export function MainHeader(props) {
             <nav className="navbar">
                 <li><a href="/" className="logo"> <i className="fas fa-heartbeat"></i> Care 4 All</a></li>
                 <li><a href="/" >Home</a></li>
-                <li><a href="/listdoctor">Doctor</a></li>
                 <li><a href="/services">Service</a></li>
                 <li><a href="/aboutus">About Us</a></li>
-                <li><a href="/contactus">Contact Us</a></li>
+                <li><a href="/contactus">Contact</a></li>
                 <li>
                     <div>
                         <button type="button" className="dropdown-toggle" data-toggle="dropdown" >
@@ -69,7 +68,7 @@ export function MainHeader(props) {
             <nav>
                 <div className="container-fluid">
                     {/* {console.log(localStorage.getItem('user'))} */}
-                    {localStorage.getItem('user') ? loggedOut : loggedIn}
+                    {localStorage.getItem('patient') ? loggedOut : loggedIn}
                 </div>
                 {/* copypaste */}
             </nav>

@@ -22,6 +22,10 @@ class DoctorService{
         return axios.get("http://localhost:8686/appointment/doctor/getdoctorbyid/"+id);
     }
 
+    SearchBySpec(specialization){
+        return axios.get("http://localhost:8686/appointment/doctor/getdoctorsbyspecialization?specialization="+specialization);
+    }
+
 }
 
 export default new DoctorService();

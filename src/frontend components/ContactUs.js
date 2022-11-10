@@ -22,14 +22,14 @@ export class ContactUs extends Component {
                     <img src={contactus} alt="contactus"  />
                 <p>
 
-                    <li>For queries related to Online orders
+                    <li>For queries related to Online appointments
                         Please contact us at: <a className='mail' href="http://localhost:3000/">prathyusha4501@gmail.com</a>
                     </li>
-                    <li> For queries related to Care 4 All Store experience
+                    <li> For queries related to Care 4 All Hospital experience
                         Please contact us at: <a className='mail' href="http://localhost:3000/">trishna367263@gmail.com</a>
                     </li>
 
-                    <li>For Corporate and Bulk inquiries
+                    <li>For Corporate and Bulk medical pharma inquiries
                         Please contact us at: <a className='mail' href="http://localhost:3000/"> wbhutia780@gmail.com</a>
                     </li>
                 </p>

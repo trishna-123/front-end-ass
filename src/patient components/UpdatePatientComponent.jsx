@@ -148,7 +148,7 @@ export class UpdatePatientComponent extends Component{
                                     <input type="text" name="gender"  className="form-control"
                                         placeholder="Enter gender" value={this.state.gender} onChange={this.changePatientGenderHandler} />
                                 </div>
-                                <button type="button" className="btn btn-warning" onClick={this.updatePatient}>Update2</button>
+                                <button type="button" className="btn btn-warning" onClick={this.updatePatient}>Update</button>
                                 <button type="button" className="btn btn-danger" onClick={this.cancel.bind(this)} style={{ marginLeft: "10px" }}>Cancel</button>
 
                             </form>

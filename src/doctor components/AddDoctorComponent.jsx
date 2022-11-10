@@ -38,7 +38,7 @@ export class AddDoctorComponent extends Component {
         DoctorService.createDoctor(Doctor).then(res => {
             alert("Doctor added succcessfully...")
         })
-        this.props.history.push("/getalldoctors");
+        this.props.history.push("/listdoctor");
 
     }
 
@@ -64,7 +64,7 @@ export class AddDoctorComponent extends Component {
     render() {
         return (
             <>
-            <NavBarAdmin />
+                <NavBarAdmin />
                 <div className="border">
                     <h2>Add Doctor</h2>
                     <form className="formcontainer">
@@ -77,8 +77,15 @@ export class AddDoctorComponent extends Component {
                                 value={this.state.specialization} onChange={this.changeSpecializationHandler} />
                         </div>
                         <div className="formgroup">
-                            <input type="text" name="consultant" id="" className="formcontrol" placeholder="Enter consultant"
-                                value={this.state.consultant} onChange={this.changeConsultantHandler} />
+
+                            <input name="consultant" className="formcontrol" list="consultant" value={this.state.consultant}
+                                placeholder="Select consultant" onChange={this.changeConsultantHandler} />
+                            <datalist id="consultant">
+                                <option value="online"></option>
+                                <option value="inPerson"></option>
+                            </datalist>
+                            {/* <input type="text" name="consultant" id="" className="formcontrol" placeholder="Enter consultant"
+                                value={this.state.consultant} onChange={this.changeConsultantHandler} /> */}
                         </div>
                         <div className="formgroup">
                             <input type="text" name="fee" id="" className="formcontrol" placeholder="Enter fee"
@@ -91,7 +98,7 @@ export class AddDoctorComponent extends Component {
                         </div>
                     </form>
                 </div>
-                </>
+            </>
         )
     }
 

@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import PatientService from "./services/PatientService";
 import { Link } from "react-router-dom";
+import {Profile} from './frontend components/Profile'
 import { NavBar } from "./frontend components/NavBar";
 import '../src/css/signin.css';
+
 export class SigninValidation extends Component {
+
     constructor(props) {
         super(props);
         this.state = {
@@ -11,13 +14,16 @@ export class SigninValidation extends Component {
             userName: '',
             password: '',
             pat: '',
-            patientLogName:'',
+            patientLogName: '',
+            
         }
 
         this.changeUserName = this.changeUserName.bind(this);
         this.changePassword = this.changePassword.bind(this);
 
         this.validatePatient = this.validatePatient.bind(this);
+
+        
     }
 
     changeUserName = (event) => {
@@ -37,9 +43,10 @@ export class SigninValidation extends Component {
             if ((this.state.userName === this.state.pat[i].userName) && (this.state.password === this.state.pat[i].password)) {
                 alert("Welcome " + this.state.pat[i].patientName);
                 find = 1;
-                this.setState.patientLogName = this.state.pat[i].patientName;
-                
-                this.props.history.push("/addappointment");
+                // this.setState.patientLogName = this.state.pat[i].patientName;
+                this.state.patientLogName = this.state.pat[i].patientName;
+                alert(this.state.patientLogName);
+                this.props.history.push("/searchbyspec");
             }
         }
 
@@ -61,9 +68,9 @@ export class SigninValidation extends Component {
             this.state.pat = (res.data);
             console.log(this.state.pat);
             console.log(this.state.patientLogName);
-            })
-           
-  
+        })
+
+
     }
 
 
@@ -71,9 +78,8 @@ export class SigninValidation extends Component {
     render() {
         return (
             <div >
-                <NavBar />
                 <div className="container">
-
+                    
                     <div className="form-container sign-in-container">
                         <form action="#">
                             <h1>Sign in</h1> <br />
@@ -95,3 +101,4 @@ export class SigninValidation extends Component {
         )
     }
 }
+
