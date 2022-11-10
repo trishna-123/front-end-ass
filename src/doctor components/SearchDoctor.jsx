@@ -52,6 +52,7 @@ export class SearchDoctorBySpec extends Component {
                                 <th>specialization</th>
                                 <th>consultant</th>
                                 <th>fee</th>
+                                <th>Book</th>
 
                             </tr>
                         </thead>
@@ -64,6 +65,13 @@ export class SearchDoctorBySpec extends Component {
                                             <td className="text-center align-middle">{doctor.specialization}</td>
                                             <td className="text-center align-middle">{doctor.consultant}</td>
                                             <td className="text-center align-middle">{doctor.fee}</td>
+                                            <td className="text-center align-middle">
+                                                {/* <button className="appbutton"><a href='appointment'>Appointment</a></button> */}
+                                                <button type="button">
+                                                    <Link to={"/appointment/" +doctor.doctorId}>Appointment
+                                                    </Link>
+                                                </button>
+                                            </td>
 
                                         </tr>
                                 )}

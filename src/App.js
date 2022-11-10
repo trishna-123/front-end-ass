@@ -21,6 +21,7 @@ import { ContactUs } from './frontend components/ContactUs';
 import TopServices from './frontend components/Service';
 import { SearchDoctorBySpec } from './doctor components/SearchDoctor';
 import { Profile } from './frontend components/Profile';
+import AddAppointmentUser from './appointment component/AddAppointmentUser';
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
         <Route path="/addpatient" component={AddPatientComponent}></Route>
         <Route path="/updatepatientbyid/:id" component={UpdatePatientComponent}></Route>
         <Route path="/listdoctor" component={ListDoctorComponent}></Route>
+        <Route path="/appointment/:id" component={AddAppointmentUser}></Route>
         <Route path="/searchbyspec" component={SearchDoctorBySpec}></Route>
        <Route path="/adddoctor" component={AddDoctorComponent}></Route>
        <Route path="/aboutus" component={AboutUs}></Route>
