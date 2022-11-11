@@ -22,6 +22,9 @@ import TopServices from './frontend components/Service';
 import { SearchDoctorBySpec } from './doctor components/SearchDoctor';
 import { Profile } from './frontend components/Profile';
 import AddAppointmentUser from './appointment component/AddAppointmentUser';
+import InProcess from './Inprocess';
+import AppointmentAdded from './frontend components/AppointmentAdded';
+
 
 
 function App() {
@@ -45,6 +48,8 @@ function App() {
        <Route path="/aboutus" component={AboutUs}></Route>
        <Route path="/services" component={TopServices}></Route>
        <Route path="/profile" component={Profile}></Route>
+       <Route path="/appointmentadded" component={AppointmentAdded}></Route>
+       <Route path="/inprocess" component={InProcess}></Route>
        <Route path="/contactus" component={ContactUs}></Route>
        <Route path="/listappointments" component={ListAppointmentComponent}></Route>
         <Route path="/addappointment" component={AddAppointmentComponent}></Route>

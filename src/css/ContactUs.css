@@ -24,7 +24,7 @@ li{
     color: #444;    
     margin-bottom: .3rem;
     font-size: 18px;
-    text-align: justify;
+    text-align: center;
     margin-top: 2rem;
 }
 
@@ -40,5 +40,9 @@ a {
     margin-left: 30rem;
     margin-right: 30rem;
     padding: 2% 2%;
+    margin-top: 4rem;
     
+}
+.main-heading{
+    margin-bottom: 5rem;
 }

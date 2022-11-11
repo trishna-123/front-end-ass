@@ -20,8 +20,9 @@
     font-family: 'Poppins', sans-serif;
 }
 
-h2 {
+.sign {
     color: var(--darkpurple);
+    margin-bottom: 3rem;
     justify-content: center;
     text-align: center;
     font-weight: bold;
@@ -55,16 +56,18 @@ h2 {
 }
 
 .border {
-    margin-left: 50%;
+    /* margin-left: 50rem;
     margin-right: 5%;
     margin-top: 0%;
-    margin-bottom: 10%;
+    margin-bottom: 10%; */
+    margin: 0%;
     border-color: var(--darkpurple);
 }
 
 .formgroup {
-    margin-right: 10%;
+    /* margin-right: 10%;
     padding-right: 0%;
+    margin-left: 20rem; */
 }
 
 .formcontrol {
@@ -110,11 +113,15 @@ h2 {
     background-color: rgb(241, 43, 43);
 }
 
-.image img {
-    float: left;
-    margin: 9rem 1rem 0 2rem;
-    height: 500px;
-    width: 600px;
+.image2 {
+    /* float: cent; */
+    /* margin: 9rem 1rem 0 2rem; */
+    height: 400px;
+    width: 500px;
+    margin-bottom: 2rem;
+    align-items: center;
+    margin-top: 2rem;
+    /* margin-right: 20rem; */
 }
 
 .first {

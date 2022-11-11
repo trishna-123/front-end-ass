@@ -5,6 +5,8 @@ import image3 from '../images/Gynaecology.jpg';
 import image4 from '../images/paediatrics1.jpg';
 import '../css/Services.css';
 import { MainHeader } from "../MainHeader";
+import { foot } from "./Foot";
+
 export default class TopServices extends Component {
 
     render() {
@@ -20,22 +22,22 @@ export default class TopServices extends Component {
                         <div className="card" style={{ height: "14rem" }}>
                             <img className="card-img-top" src={image1} alt="" />
                             <h5 className="card-title">
-                                <button><a href="dermatologydoc">Dermatology</a></button></h5>
+                                <button><a href="/inprocess">Dermatology</a></button></h5>
                         </div>
                         <div className="card" style={{ height: "14rem" }}>
                             <img className="card-img-top img2" src={image2} alt="" />
                             <h5 className="card-title">
-                                <button><a href="generaldoc">General Physician</a></button></h5>
+                                <button><a href="/inprocess">General Physician</a></button></h5>
                         </div>
                         <div className="card" style={{ height: "14rem" }}>
                             <img className="card-img-top" src={image3} alt="" />
                             <h5 className="card-title">
-                                <button><a href="gynaecologydoc">Gynaecology</a></button></h5>
+                                <button><a href="/inprocess">Gynaecology</a></button></h5>
                         </div>
                         <div className="card" style={{ height: "14rem" }}>
                             <img className="card-img-top" src={image4} alt="" />
                             <h5 className="card-title">
-                                <button><a href="paediatricsdoc">Paediatrics</a></button></h5>
+                                <button><a href="/inprocess">Paediatrics</a></button></h5>
                         </div>
                     </div>
                         
@@ -116,6 +118,7 @@ export default class TopServices extends Component {
                 </div>
                 </div>
                 <br /><br />
+                <foot/>
             </>
         )
     }

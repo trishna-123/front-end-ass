@@ -37,7 +37,7 @@ export class AddAppointmentComponent extends Component{
         AppointmentService.createAppointment(appointment).then(res => {
             alert("Appointment added successfully....")
         })
-        this.props.history.push("/listappointments");
+        this.props.history.push("/appointmentadded");
     }
 
     cancel(){

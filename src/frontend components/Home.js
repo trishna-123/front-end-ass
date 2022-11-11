@@ -4,6 +4,7 @@ import { Component } from "react";
 import '../css/Home.css';
 import purplereception from '../images/purplereception.gif'
 import { MainHeader } from "../MainHeader";
+import { foot } from "./Foot";
 
 export class Home extends Component{
     constructor(props){
@@ -21,9 +22,9 @@ export class Home extends Component{
                     <img src={purplereception} alt="purplereception" />
                 </div>
                 <div className="content">
-                    <h3>Hello There!</h3>
-                    <h6>Always caring about your health!</h6>
-                    <h6>We are here to help you!!</h6>
+                    <h3 className="hello-there">Hello There!</h3>
+                    <h6 className="content1">Always caring about your health!</h6>
+                    <h6 className="content1">We are here to help you!!</h6>
                     <a href="/signin" className="btn"> Book an Appointment with Us <i className="fa-solid fa-chevron-right"></i></a>
                 </div>
             </section>
@@ -51,6 +52,7 @@ export class Home extends Component{
                 </div>
                 
             </section>
+            <foot />
             </>
         )
     }

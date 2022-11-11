@@ -55,7 +55,7 @@ export default class AddAppointmentUser  extends Component{
         AppointmentService.createAppointment(appointment).then(res => {
             alert("Appointment added successfully....")
         })
-        this.props.history.push("/listappointments");
+        this.props.history.push("/appointmentadded");
     }
     
 
@@ -98,7 +98,7 @@ export default class AddAppointmentUser  extends Component{
             alert("Appointment updated successfully....")
         })
         
-        this.props.history.push("/listappointments");
+        this.props.history.push("/appointmentadded");
     }
 
     render() {

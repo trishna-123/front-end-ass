@@ -34,6 +34,8 @@ section:nth-child(odd){
     margin-top: 0%;
     align-items: center;
     vertical-align: middle;
+    
+    margin: 0;
 }
 
 .home img{
@@ -41,6 +43,8 @@ section:nth-child(odd){
     height: 500px;
     padding-top: 0%;
     margin-top: 4rem;
+    margin-right: 20rem;
+
 }
 
 .home .content h3{
@@ -49,6 +53,7 @@ section:nth-child(odd){
     line-height: 1.8;
     padding-left: 30px;
     font-style: normal;
+    margin-bottom: 3rem;
     /* text-shadow: var(--text-shawdow); */
 }
 
@@ -93,6 +98,8 @@ section:nth-child(odd){
     text-align: center;
     padding: 1.5rem;
     color: rgb(0, 0, 0);
+    width: 20rem;
+    height: 15rem;
     /* box-shadow: var(--box-shadow); */
 }
 
@@ -100,16 +107,23 @@ section:nth-child(odd){
     font-size: 4rem;
     color: #3f4bd6;
     padding-bottom: .7rem;
+    align-items: center;
+    
 }
 
 .icons-container .icons h3{
     font-size: 2rem;
     color: #76b4fa;
-    padding-bottom: .7rem;
+    padding-bottom: 0;
+    margin-bottom: 2rem;
+    margin-top: 0rem;
 }
 
 .icons-container .icons p{
     font-size: 1rem;
     color: #0015ff;
     padding-bottom: .5rem;
+    margin-top: -4rem;
+    /* margin-right: 1rem; */
+    margin-left: -1rem;
 }

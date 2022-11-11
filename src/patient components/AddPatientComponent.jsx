@@ -80,12 +80,11 @@ export class AddPatientComponent extends Component {
     render() {
         return (
             <div>
-                <div className="image">
-                    <img src={purplereception} alt="purplereception" />
-                </div>
+                {/* <div className="image"> */}
+                {/* </div> */}
                 <br />
                 <div className="border">
-                <h2>Sign Up</h2>
+                <h2 className="sign">Sign Up</h2>
                     <form className="formcontainer">
                         <div className="formgroup">
                             <label ></label>
@@ -144,7 +143,9 @@ export class AddPatientComponent extends Component {
                         <button type="button" className="danger" onClick={this.cancel.bind(this)}>Cancel</button>
                         </div>
 
+
                     </form>
+                        <img className="image2" src={purplereception} alt="purplereception" />
                 </div>
             </div>
 

@@ -15,8 +15,9 @@ export class ContactUs extends Component {
         return (
             <>
             <MainHeader/>
-                <div className="col-md-12 text-center">
-                    <h3 className="main-heading"> Contact Us</h3></div>
+                {/* <div className="col-md-12 text-center"> */}
+                    <h3 className="main-heading"> Contact Us</h3>
+                    {/* </div> */}
                 <div className='underline mx-auto'></div>
 
                     <img src={contactus} alt="contactus"  />

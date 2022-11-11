@@ -45,13 +45,14 @@ export class SigninValidation extends Component {
                 find = 1;
                 // this.setState.patientLogName = this.state.pat[i].patientName;
                 this.state.patientLogName = this.state.pat[i].patientName;
-                alert(this.state.patientLogName);
+                this.state.patientId = this.state.pat[i].userId;
+                alert("Your UserId is "+this.state.patientId);
                 this.props.history.push("/searchbyspec");
             }
         }
 
         if (find === 0) {
-            alert("Invalid");
+            alert("Wrong username or password");
         }
     }
 
