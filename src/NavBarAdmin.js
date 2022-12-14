@@ -15,7 +15,7 @@ export function NavBarAdmin(){
                 
 
             </nav>
-            {/* <a href="/signin">Sign in</a> */}
+           
         </div>
     )
 }

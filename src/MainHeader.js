@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useHistory } from "react-router-dom";
-import { NavBar } from "./frontend components/NavBar";
+// import { NavBar } from "./frontend components/NavBar";
 // import { NavAfterLoginUser } from "./NavAfterLoginUser";
 import '../src/css/NavBar.css';
 
