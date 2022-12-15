@@ -12,10 +12,7 @@ export function NavBarAdmin(){
                 <li><a href="listpatient">Patient</a></li>
                 <li><a href="/listappointments">Appointment</a></li>
                 <li><a href="/">log out</a></li>
-                
-
             </nav>
-           
         </div>
     )
 }
